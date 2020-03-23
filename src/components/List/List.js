@@ -33,9 +33,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
@@ -44,7 +44,7 @@ class List extends React.Component {
     return (
       <section className={styles.component}>
         <Hero titleText={this.props.title}
-              imageText={this.props.image} />
+          imageText={this.props.image} />
 
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
@@ -52,7 +52,7 @@ class List extends React.Component {
 
         <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
-          <Column key={key} {...columnProps} />
+            <Column key={key} {...columnProps} />
           ))}
         </div>
 
@@ -62,7 +62,7 @@ class List extends React.Component {
 
       </section>
       
-    )
+    );
   }
 }
 
