@@ -7,5 +7,5 @@ const mapStateToProps = (state, props) => ({
 
 
 
-export const getCardsForColumn = ({cards}, listId) => cards.filter(card => card.listId == listId);
+export const getCardsForColumn = ({cards}, listId) => cards.filter(card => card.columnId == listId);
 export default connect(mapStateToProps)(Column);
